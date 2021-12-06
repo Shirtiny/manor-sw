@@ -12,7 +12,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": false,
     "strict": true,
-    "allowJs": false,
+    "allowJs": true,
     "noImplicitAny": false,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
@@ -36,12 +36,15 @@
     ],
     "lib": [
       "ES6",
-      "DOM"
+      "DOM",
+      "WebWorker",
+      "WebWorker.ImportScripts",
+      "ScriptHost"
     ]
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx",
+    "src/**/*.tsx", "src/manorSW.js",
   ],
   "exclude": [
     "node_modules",
