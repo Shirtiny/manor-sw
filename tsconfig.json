@@ -44,7 +44,7 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx", "src/manorSW.js",
+    "src/**/*.tsx", "src/manorSW.template.js",
   ],
   "exclude": [
     "node_modules",

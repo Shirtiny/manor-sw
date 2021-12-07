@@ -1,7 +1,7 @@
 /*
  * @Author: Shirtiny
  * @Date: 2021-06-26 17:41:22
- * @LastEditTime: 2021-11-27 10:42:54
+ * @LastEditTime: 2021-12-07 22:36:33
  * @Description:
  */
 const esbuild = require("esbuild");
@@ -11,6 +11,7 @@ const { sassPlugin } = require("esbuild-sass-plugin");
 const postcss = require("postcss");
 const autoprefixer = require("autoprefixer");
 const postcssPresetEnv = require("postcss-preset-env");
+const templateIntegrityCheck = require("./plugin/template-integrity-check");
 const { config, isDev } = require("./var");
 const logger = require("./logger");
 
@@ -40,6 +41,7 @@ const buildList = [
           return css;
         },
       }),
+      templateIntegrityCheck(),
     ],
     loader: {
       ".svg": "dataurl",
